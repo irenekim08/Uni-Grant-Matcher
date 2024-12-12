@@ -26,4 +26,4 @@ if association == "Student":
     list_purposes_s = ["Scholarship/Special Opportunity (Non-Uni)", "Conference", "Research", 
                   "Activity", "Travel/Housing/Food", "Supplies", "Study Abroad", "AP/ACT Prep",
                   "Startup (New program)", "Camps (academic, arts, athletics)"]
-    purposes_s = st.pills("Select all purposes for grant", list_purposes_f, selection_mode = "multi")    
+    purposes_s = st.pills("Select all purposes for grant", list_purposes_s, selection_mode = "multi")    
