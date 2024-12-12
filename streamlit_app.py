@@ -26,7 +26,7 @@ if association == "Faculty":
                 "Frankel Fund For Learning Innovation": "Research",
                 "Innovations in Technology (Professional Development Funding)": ["Research", "Activity", "Project Supplies"],
                 "Uni Endowment Fund (Professional Development Funding)": ["Special Opportunity (Non-Uni)", "Project Supplies", "Startup (New program)", "Professional Membership"],
-                "Teaching Excellence (Makino Awards)": ["Research/Publication", "Activity", "Travel/Housing/Food", "Project Supplies", "Startup (New program)"}
+                "Teaching Excellence (Makino Awards)": ["Research/Publication", "Activity", "Travel/Housing/Food", "Project Supplies", "Startup (New program)"]}
 
 
                                                         
