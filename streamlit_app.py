@@ -21,7 +21,7 @@ if association == "Faculty":
                   "Classroom Supplies", "Startup (New program)", "Professional Membership"]
     purposes_f = st.pills("Select all purposes for grant", list_purposes_f, selection_mode = "multi")
 
-    faculty_grants = {"Uni High Faculty Classroom Needs & Projects Request": "Classroom Supplies"
+    faculty_grants = {"Uni High Faculty Classroom Needs & Projects Request": "Classroom Supplies",
                 "Ang Current Use Fund (Professional Development Funding)": ["Special Opportunity (Non-Uni)", "Conference"]
                 "Frankel Fund For Learning Innovation": "Research",
                 "Innovations in Technology (Professional Development Funding)": ["Research", "Activity", "Project Supplies"],
