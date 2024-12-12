@@ -1,10 +1,8 @@
 import streamlit as st
 
-your_working_directory/
-├── pages/
-│   ├── faculty.py
-│   └── student.py
-└── your_homepage.py
+pages/
+    faculty.py
+    student.py
     
 
 st.title("Uni Grant Matcher")
