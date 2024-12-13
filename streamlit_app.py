@@ -104,7 +104,9 @@ for grant in generate_results(purposes):
 st.write("For more information on grants and funds at Uni, visit the Uni High website.")         
          
         
-
+# GENERATING KEY ERROR TYPE B FOR CONFERENCE AND RESEARCH
+# CHECK CACHING & REBOOTING
+# CHECK HOW TO GET RID OF ERROR WHEN NONE SELECTED
 
     
     
