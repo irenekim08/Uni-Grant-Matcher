@@ -26,7 +26,7 @@ if association == "Faculty":
               "Project Supplies": ["Innovations in Technology (Professional Development Funding)", "Uni Endowment Fund (Professional Development Funding)", "Teaching Excellence (Makino Awards)"]
               "Startup (New program)": ["Uni Endowment Fund (Professional Development Funding)", "Teaching Excellence (Makino Awards)"],
               "Professional Membership": "Uni Endowment Fund (Professional Development Funding)",
-              "Travel/Housing/Food": "Teaching Excellence (Makino Awards)"
+              "Travel/Housing/Food": "Teaching Excellence (Makino Awards)"}
 
     purposes_f = st.pills("Select all purposes for grant", grants.keys(), selection_mode = "multi")
 
@@ -46,7 +46,7 @@ if association == "Student":
               "Scholarship/Special Opportunity": ["Boren Scholarship", "Eastern Illini Electric Cooperative", "The Illinois Odd Fellow-Rebekah Scholarship Program", "Martin Luther King Scholarship"]
               "Study Abroad": ["Boren Scholarship", "McNevin Scholarship"]
               "AP/ACT Prep": ["Boren Scholarship", "McNevin Scholarship"]
-              "Camps (academic, arts, athletics)": ["Boren Scholarship", "McNevin Scholarship"]
+              "Camps (academic, arts, athletics)": ["Boren Scholarship", "McNevin Scholarship"]}
 
     purposes_s = st.pills("Select all purposes for grant", grants.keys(), selection_mode = "multi")  
 
