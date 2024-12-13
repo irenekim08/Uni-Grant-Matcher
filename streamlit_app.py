@@ -12,7 +12,12 @@ association = st.selectbox(
     index = None,
     placeholder = "Select association...")
 
-# st.write("Displaying grant uses for:", association)
+ st.write("Displaying grant uses for:", association)
+
+
+
+
+purposes = []
 
 # Faculty pill buttons
 if association == "Faculty":
@@ -28,7 +33,7 @@ if association == "Faculty":
               "Professional Membership": "Uni Endowment Fund (Professional Development Funding)",
               "Travel/Housing/Food": "Teaching Excellence (Makino Awards)"}
 
-    purposes_f = st.pills("Select all purposes for grant", grants.keys(), selection_mode = "multi")
+    purposes = st.pills("Select all purposes for grant", grants.keys(), selection_mode = "multi")
 
 
 
@@ -48,15 +53,16 @@ if association == "Student":
               "AP/ACT Prep": ["Boren Scholarship", "McNevin Scholarship"],
               "Camps (academic, arts, athletics)": ["Boren Scholarship", "McNevin Scholarship"]}
 
-    purposes_s = st.pills("Select all purposes for grant", grants.keys(), selection_mode = "multi")  
+    purposes = st.pills("Select all purposes for grant", grants.keys(), selection_mode = "multi")  
 
 
-
-
-
-st.write(f"Check out: {generate_results}")
 
 # Generate results while purposes != empty
+while purposes != []:
+    generate_results(purposes)
+
+
+
 def generate_results(purposes: list) -> list:
     """
     Generates results of suitable grant(s) based off of user's chosen purposes.
@@ -67,8 +73,20 @@ def generate_results(purposes: list) -> list:
     Returns:
             matches(list):         List containing string titles of matched grants.
     """
+    matches = []
+    
+    for purpose in purposes:
+        for grant in grants[purpose]:
+            matches += [grant]
+        
+        if len(purposes) == 1:
+            return matches
 
-    # for purpose in purposes:
+        return matches
+        
+
+         
+         
         
 
 
