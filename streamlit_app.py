@@ -39,13 +39,13 @@ if association == "Student":
 
     # Dictionary containing all grants with their corresponding purposes
     grants = {"Conference": "Barbara Lazarus Memorial Fund",
-              "Research": ["Barbara Lazarus Memorial Fund", "Frankel Fund For Learning Innovation"]
-              "Activity": ["Barbara Lazarus Memorial Fund", "Makino Awards"]
-              "Travel/Housing/Food": ["Barbara Lazarus Memorial Fund", "Boren Scholarship", "Makino Awards"]
-              "Supplies": ["Barbara Lazarus Memorial Fund", "Boren Scholarship", "Makino Awards"]
-              "Scholarship/Special Opportunity": ["Boren Scholarship", "Eastern Illini Electric Cooperative", "The Illinois Odd Fellow-Rebekah Scholarship Program", "Martin Luther King Scholarship"]
-              "Study Abroad": ["Boren Scholarship", "McNevin Scholarship"]
-              "AP/ACT Prep": ["Boren Scholarship", "McNevin Scholarship"]
+              "Research": ["Barbara Lazarus Memorial Fund", "Frankel Fund For Learning Innovation"],
+              "Activity": ["Barbara Lazarus Memorial Fund", "Makino Awards"],
+              "Travel/Housing/Food": ["Barbara Lazarus Memorial Fund", "Boren Scholarship", "Makino Awards"],
+              "Supplies": ["Barbara Lazarus Memorial Fund", "Boren Scholarship", "Makino Awards"],
+              "Scholarship/Special Opportunity": ["Boren Scholarship", "Eastern Illini Electric Cooperative", "The Illinois Odd Fellow-Rebekah Scholarship Program", "Martin Luther King Scholarship"],
+              "Study Abroad": ["Boren Scholarship", "McNevin Scholarship"],
+              "AP/ACT Prep": ["Boren Scholarship", "McNevin Scholarship"],
               "Camps (academic, arts, athletics)": ["Boren Scholarship", "McNevin Scholarship"]}
 
     purposes_s = st.pills("Select all purposes for grant", grants.keys(), selection_mode = "multi")  
