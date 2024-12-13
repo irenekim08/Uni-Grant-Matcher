@@ -12,7 +12,7 @@ association = st.selectbox(
     index = None,
     placeholder = "Select association...")
 
- st.write("Displaying grant uses for:", association)
+st.write("Displaying grant uses for:", association)
 
 
 
