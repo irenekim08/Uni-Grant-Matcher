@@ -57,10 +57,6 @@ if association == "Student":
 
 
 
-# Generate results while purposes != empty
-while purposes != []:
-    generate_results(purposes)
-
 
 
 def generate_results(purposes: list) -> list:
@@ -83,6 +79,11 @@ def generate_results(purposes: list) -> list:
             return matches
 
         return matches
+
+
+# Generate results while purposes != empty
+while purposes != []:
+    generate_results(purposes)
         
 
          
