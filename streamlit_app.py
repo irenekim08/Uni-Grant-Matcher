@@ -83,7 +83,7 @@ def generate_results(purposes: list) -> list:
 
 # Generate results while purposes != empty
 while purposes != []:
-    generate_results(purposes)
+    st.write(f"Check out: {generate_results(purposes)}")
         
 
          
