@@ -1,10 +1,5 @@
 import streamlit as st
 
-
-@st.cache_data
-def long_running_function(param1, param2):
-    return(
-
 st.title("Uni Grant Matcher")
 st.write(
     "In need of funding but don't know what grant to apply for? Use the Uni Grant Matcher to find your best fit!"
@@ -87,9 +82,8 @@ def generate_results(purposes: list) -> list:
 
 
 # Generate results while purposes != empty
-while purposes != []:
+#while purposes != []:
     st.write(f"Check out: {generate_results(purposes)}")
-    )
 
          
          
