@@ -23,7 +23,7 @@ if association == "Faculty":
               "Conference": "Ang Current Use Fund (Professional Development Funding)",
               "Research/Publication": ["Frankel Fund For Learning Innovation", "Innovations in Learning (Professional Development Funding)", "Teaching Excellence (Makino Awards)"],
               "Activity": ["Innovations in Learning (Professional Development Funding)", "Teaching Excellence (Makino Awards)"],
-              "Project Supplies": ["Innovations in Technology (Professional Development Funding)", "Uni Endowment Fund (Professional Development Funding)", "Teaching Excellence (Makino Awards)"]
+              "Project Supplies": ["Innovations in Technology (Professional Development Funding)", "Uni Endowment Fund (Professional Development Funding)", "Teaching Excellence (Makino Awards)"],
               "Startup (New program)": ["Uni Endowment Fund (Professional Development Funding)", "Teaching Excellence (Makino Awards)"],
               "Professional Membership": "Uni Endowment Fund (Professional Development Funding)",
               "Travel/Housing/Food": "Teaching Excellence (Makino Awards)"}
