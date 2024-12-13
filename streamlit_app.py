@@ -68,7 +68,7 @@ def generate_results(purposes: list) -> list:
             matches(list):         List containing string titles of matched grants.
     """
 
-    for purpose in purposes:
+    # for purpose in purposes:
         
 
 
