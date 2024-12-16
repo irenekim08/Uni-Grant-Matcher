@@ -70,13 +70,10 @@ def generate_results(purposes: list) -> list:
             matches(list):         List containing string titles of matched grants.
     """
     matches = []
-
-    st.write(f"{purposes}")
-    
-    if len(purposes) == 1:
-        return purposes
         
     for purpose in purposes:
+        if len(grant[purpose].values()) == 1:
+            return grant
         for grant in grants[purpose]:
             matches += [grant]
 
