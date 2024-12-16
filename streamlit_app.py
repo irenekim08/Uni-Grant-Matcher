@@ -70,15 +70,25 @@ def generate_results(purposes: list) -> list:
             matches(list):         List containing string titles of matched grants.
     """
     matches = []
-    
-    for purpose in purposes:
+
+    if len(purposes) > 1:
+        for purpose in purposes:
+            # One grant
+            if type(grants[purpose]) == str:
+                matches += grants[purpose]
+            # Multiple grants
+            else:
+                for grant in grants[purpose]:
+                    matches += [grant]
+
+    if len(purposes) == 1:
         # One grant
-        if type(grants[purpose]) == str:
-            matches += grants[purpose]
-        # Multiple grants
-        else:
-            for grant in grants[purpose]:
-                matches += [grant]
+            if type(grants[purpose]) == str:
+                matches += grants[purpose]
+            # Multiple grants
+            else:
+                for grant in grants[purpose]:
+                    matches += [grant]
 
         return matches
 
