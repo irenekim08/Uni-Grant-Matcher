@@ -97,9 +97,9 @@ grant_links = {"Barbara Lazarus Memorial Fund": "https://www.uni.illinois.edu/si
                 "Teaching Excellence (Makino Awards)": "https://www.uni.illinois.edu/sites/default/files/2022-11/Makino_Award_Teaching_Excellence.doc"}
 
     # Generate results when user redefines purposes
-if purpose
-for grant in generate_results(purposes):
-    st.link_button(f"Apply for {grant}", grant_links[grant])
+if purposes != empty:
+    for grant in generate_results(purposes):
+        st.link_button(f"Apply for {grant}", grant_links[grant])
 
 st.write("For more information on grants and funds at Uni, visit the Uni High website.")         
          
