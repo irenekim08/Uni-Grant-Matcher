@@ -79,7 +79,7 @@ def generate_results(purposes: list) -> list:
                 matches += [grant]
         # One grant
         else:
-            st.write(f"{grants[purpose]")
+            st.write(f"{grants[purpose]}")
             matches += grants[purpose]
     st.write(f"{matches}")
     return matches
