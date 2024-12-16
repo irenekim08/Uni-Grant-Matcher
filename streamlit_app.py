@@ -71,6 +71,8 @@ def generate_results(purposes: list) -> list:
     """
     matches = []
 
+    st.write(f"{purposes}")
+    
     if len(purposes) == 1:
         return purposes
         
