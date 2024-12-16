@@ -73,8 +73,8 @@ def generate_results(purposes: list) -> list:
     
     for purpose in purposes:
         # One grant
-        if type(grants[purpose].values()) == str:
-            return grants[purpose]
+        if grants[purpose] == str:
+            matches += grants[purpose]
         # Multiple grants
         for grant in grants[purpose]:
             matches += [grant]
