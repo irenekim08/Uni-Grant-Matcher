@@ -59,7 +59,7 @@ if association == "Student":
 
 
 
-def generate_results(purposes: list) -> list:
+(def generate_results(purposes: list) -> list:
     """
     Generates results of suitable grant(s) based off of user's chosen purposes.
 
@@ -96,8 +96,9 @@ grant_links = {"Barbara Lazarus Memorial Fund": "https://www.uni.illinois.edu/si
                 "Innovations in Learning (Professional Development Funding)": "https://forms.illinois.edu/sec/4072389?referrer=https://shibboleth.illinois.edu/",
                 "Uni Endowment Fund (Professional Development Funding)": "https://forms.illinois.edu/sec/4072389",
                 "Teaching Excellence (Makino Awards)": "https://www.uni.illinois.edu/sites/default/files/2022-11/Makino_Award_Teaching_Excellence.doc"}
-
+)
     # Generate results when user redefines purposes
+if purpose
 for grant in generate_results(purposes):
     st.link_button(f"Apply for {grant}", grant_links[grant])
 
