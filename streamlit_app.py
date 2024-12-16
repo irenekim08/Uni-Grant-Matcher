@@ -74,21 +74,21 @@ def generate_results(purposes: list) -> list:
     if len(purposes) > 1:
         for purpose in purposes:
             # One grant
-            if type(grants[purpose]) == str:
-                matches += grants[purpose]
-            # Multiple grants
-            else:
+            if type(grants[purpose]) != str:
                 for grant in grants[purpose]:
                     matches += [grant]
+            # Multiple grants
+            else:
+                matches += grants[purpose]
 
     if len(purposes) == 1:
         # One grant
-            if type(grants[purposes]) == str:
-                matches += grants[purposes]
-            # Multiple grants
-            else:
-                for grant in grants[purpose]:
-                    matches += [grant]
+        if type(grants[purposes]) != str:
+            for grant in grants[purpose]:
+                matches += [grant]            
+        # Multiple grants
+        else:
+            matches += grants[purposes]
 
     return matches
 
