@@ -90,7 +90,7 @@ def generate_results(purposes: list) -> list:
                 for grant in grants[purpose]:
                     matches += [grant]
 
-        return matches
+    return matches
 
 
 
