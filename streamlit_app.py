@@ -72,6 +72,7 @@ def generate_results(purposes: list) -> list:
     matches = []
 
     for purpose in purposes:
+        st.write(f"{grants[purpose]} {[grants[purpose]]}")
         for grant in [grants[purpose]]:
             matches += [grant]
 
