@@ -19,6 +19,7 @@ st.write("Displaying grant uses for:", association)
 
 purposes = []
 
+
 # Faculty pill buttons
 if association == "Faculty":
     
@@ -73,11 +74,12 @@ def generate_results(purposes: list) -> list:
     for purpose in purposes:
         for grant in grants[purpose]:
             matches += [grant]
-        
-        if len(purposes) == 1:
-            return matches
+
+        st.write(f"{matches}")
 
         return matches
+
+
 
 
 st.write(f"Check out:")
@@ -96,7 +98,9 @@ grant_links = {"Barbara Lazarus Memorial Fund": "https://www.uni.illinois.edu/si
                 "Uni Endowment Fund (Professional Development Funding)": "https://forms.illinois.edu/sec/4072389",
                 "Teaching Excellence (Makino Awards)": "https://www.uni.illinois.edu/sites/default/files/2022-11/Makino_Award_Teaching_Excellence.doc"}
 
-    # Generate results when user redefines purposes
+
+
+# Run generate_results only if there are purposes selected
 if purposes != []:
     for grant in generate_results(purposes):
         st.link_button(f"Apply for {grant}", grant_links[grant])
@@ -106,7 +110,6 @@ st.write("For more information on grants and funds at Uni, visit the Uni High we
         
 # GENERATING KEY ERROR TYPE B FOR CONFERENCE AND RESEARCH
 # CHECK CACHING & REBOOTING
-# CHECK HOW TO GET RID OF ERROR WHEN NONE SELECTED
 
     
     
