@@ -80,7 +80,7 @@ def generate_results(purposes: list) -> list:
         # One grant
         else:
             matches += grants[purpose]
-
+    st.write(f"{matches}")
     return matches
 
 
