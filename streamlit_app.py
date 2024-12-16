@@ -58,8 +58,8 @@ if association == "Student":
 
 
 
-
-(def generate_results(purposes: list) -> list:
+(
+def generate_results(purposes: list) -> list:
     """
     Generates results of suitable grant(s) based off of user's chosen purposes.
 
