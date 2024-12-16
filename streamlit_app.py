@@ -83,6 +83,7 @@ def generate_results(purposes: list) -> list:
                 matches += grants[purpose]
 
     if len(purposes) == 1:
+        st.write(f"{purposes}")
         # Multiple grants
         if type(grants[purposes]) != str:
             for grant in grants[purpose]:
