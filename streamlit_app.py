@@ -72,15 +72,16 @@ def generate_results(purposes: list) -> list:
     matches = []
 
     for purpose in purposes:
+        
         # Multiple grants
-        st.write(f"{purpose}")
         if type(grants[purpose]) != str:
             for grant in grants[purpose]:
                 matches += [grant]
+                
         # One grant
         else:
             matches += [grants[purpose]]
-    st.write(f"{matches}")
+            
     return matches
 
 
@@ -106,7 +107,6 @@ grant_links = {"Barbara Lazarus Memorial Fund": "https://www.uni.illinois.edu/si
 # Run generate_results only if there are purposes selected
 if purposes != []:
     st.write(f"Check out:")
-    st.write(f"{generate_results(purposes)}")
     for grant in generate_results(purposes):
         st.link_button(f"Apply for {grant}", grant_links[grant])
 
