@@ -107,7 +107,7 @@ grant_links = {"Barbara Lazarus Memorial Fund": "https://www.uni.illinois.edu/si
 # Run generate_results only if there are purposes selected
 if purposes != []:
     st.write(f"Check out:")
-    for grant in generate_results(purposes):
+    for grant in set(generate_results(purposes)):
         st.link_button(f"Apply for {grant}", grant_links[grant])
 
     st.write("For more information on grants and funds at Uni, visit the Uni High website.")         
