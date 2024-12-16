@@ -83,8 +83,8 @@ def generate_results(purposes: list) -> list:
 
     if len(purposes) == 1:
         # One grant
-            if type(grants[purpose]) == str:
-                matches += grants[purpose]
+            if type(grants[purposes]) == str:
+                matches += grants[purposes]
             # Multiple grants
             else:
                 for grant in grants[purpose]:
@@ -94,7 +94,7 @@ def generate_results(purposes: list) -> list:
 
 
 
-st.write(f"Check out:")
+
 
 grant_links = {"Barbara Lazarus Memorial Fund": "https://www.uni.illinois.edu/sites/default/files/2024-09/Barbara%20Lazarus%20Memorial%20Fund.pdf",
                 "Boren Scholarship": "https://www.uni.illinois.edu/sites/default/files/2022-11/Boren_Scholarship.docx",
@@ -114,10 +114,11 @@ grant_links = {"Barbara Lazarus Memorial Fund": "https://www.uni.illinois.edu/si
 
 # Run generate_results only if there are purposes selected
 if purposes != []:
+    st.write(f"Check out:")
     for grant in generate_results(purposes):
         st.link_button(f"Apply for {grant}", grant_links[grant])
 
-st.write("For more information on grants and funds at Uni, visit the Uni High website.")         
+    st.write("For more information on grants and funds at Uni, visit the Uni High website.")         
          
         
 # GENERATING KEY ERROR TYPE B FOR CONFERENCE AND RESEARCH
