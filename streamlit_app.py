@@ -23,7 +23,7 @@ purposes = []
 # Faculty pill buttons
 if association == "Faculty":
     
-    # Dictionary containing all grants with their corresponding purposes
+    # Dictionary containing all purposes with grants that cover them
     grants = {"Classroom Supplies": "Uni High Faculty Classroom Needs & Projects Request",
               "Special Opportunity (Non-Uni)": ["Ang Current Use Fund (Professional Development Funding)", "Uni Endowment Fund (Professional Development Funding)"],
               "Conference": "Ang Current Use Fund (Professional Development Funding)",
@@ -43,7 +43,7 @@ if association == "Faculty":
 # Student pill buttons    
 if association == "Student":  
 
-    # Dictionary containing all grants with their corresponding purposes
+    # Dictionary containing all purposes with grants that cover them
     grants = {"Conference": "Barbara Lazarus Memorial Fund",
               "Research": ["Barbara Lazarus Memorial Fund", "Frankel Fund For Learning Innovation"],
               "Activity": ["Barbara Lazarus Memorial Fund", "Makino Awards"],
@@ -107,14 +107,13 @@ grant_links = {"Barbara Lazarus Memorial Fund": "https://www.uni.illinois.edu/si
 # Run generate_results only if there are purposes selected
 if purposes != []:
     st.write(f"Check out:")
+    
+    # Remove multiplicity in total generated results
     for grant in set(generate_results(purposes)):
         st.link_button(f"Apply for {grant}", grant_links[grant])
 
     st.write("For more information on grants and funds at Uni, visit the Uni High website.")         
-         
-        
-# GENERATING KEY ERROR TYPE B FOR CONFERENCE AND RESEARCH
-# CHECK CACHING & REBOOTING
+
 
     
     
