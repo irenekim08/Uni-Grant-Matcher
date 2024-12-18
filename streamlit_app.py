@@ -35,7 +35,7 @@ if association == "Faculty":
               "Travel/Housing/Food": "Teaching Excellence (Makino Awards)"}
 
     purposes = st.pills("Select all purposes for grant", grants.keys(), selection_mode = "multi")
-
+    uni_website_url = "https://www.uni.illinois.edu/resources/faculty-resources/faculty-staff-funding-requests"
 
 
 
@@ -55,7 +55,7 @@ if association == "Student":
               "Camps (academic, arts, athletics)": ["Boren Scholarship", "McNevin Scholarship"]}
 
     purposes = st.pills("Select all purposes for grant", grants.keys(), selection_mode = "multi")  
-
+    uni_website_url = "https://www.uni.illinois.edu/resources/school-grants-students"
 
 
 
@@ -112,8 +112,6 @@ if purposes != []:
     for grant in set(generate_results(purposes)):
         st.link_button(f"Apply for {grant}", grant_links[grant])
 
-    st.write("For more information on grants and funds at Uni, visit the Uni High website.")         
-
-
+    st.markdown("For more information on grants and funds at Uni, visit the [Uni High website.](%s)" % uni_website_url)         
     
     
