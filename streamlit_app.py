@@ -1,11 +1,14 @@
 import streamlit as st
 
+# Code and comments arranged in order of appearance on app/being defined
+
+# Introduction
 st.title("Uni Grant Matcher")
 st.write(
     "In need of funding but don't know what grant to apply for? Use the Uni Grant Matcher to find your best fit!"
 )
 
-# Selectbox to select association
+# Association (selectbox)
 association = st.selectbox(
     "What is the applicant's association with Uni?",
     ("Faculty", "Student"),
@@ -17,13 +20,14 @@ st.write("Displaying grant uses for:", association)
 
 
 
+# Empty to 1. be defined based on selected association's offered purposes and 2. make sure generate_results only runs when pill(s) selected
 purposes = []
 
 
-# Faculty pill buttons
+# Uses available for faculty (pill-buttons)
 if association == "Faculty":
     
-    # Dictionary containing all purposes with grants that cover them
+    # Purposes (keys), Grants that cover them (values)
     grants = {"Classroom Supplies": "Uni High Faculty Classroom Needs & Projects Request",
               "Special Opportunity (Non-Uni)": ["Ang Current Use Fund (Professional Development Funding)", "Uni Endowment Fund (Professional Development Funding)"],
               "Conference": "Ang Current Use Fund (Professional Development Funding)",
@@ -37,13 +41,11 @@ if association == "Faculty":
     purposes = st.pills("Select all purposes for grant", grants.keys(), selection_mode = "multi")
     uni_website_url = "https://www.uni.illinois.edu/resources/faculty-resources/faculty-staff-funding-requests"
 
-
-
                                                         
-# Student pill buttons    
+# Uses available for student (pill-buttons) 
 if association == "Student":  
 
-    # Dictionary containing all purposes with grants that cover them
+    # Purposes (keys), Grants that cover them (values)
     grants = {"Conference": "Barbara Lazarus Memorial Fund",
               "Research": ["Barbara Lazarus Memorial Fund", "Frankel Fund For Learning Innovation"],
               "Activity": ["Barbara Lazarus Memorial Fund", "Makino Awards"],
@@ -59,6 +61,8 @@ if association == "Student":
 
 
 
+
+# Takes in selected purposes (pill-buttons) and gives list of grants that cover them
 def generate_results(purposes: list) -> list:
     """
     Generates results of suitable grant(s) based off of user's chosen purposes.
@@ -68,6 +72,13 @@ def generate_results(purposes: list) -> list:
     
     Returns:
             matches(list):         List containing string titles of matched grants.
+    Example:
+                (in the case of student)
+            >>> generate_results(["Conference"])
+                ["Barbara Lazarus Memorial Fund"]
+                (in the case of faculty)
+            >>> generate_results(["Conference"])
+                ["Ang Current Use Fund (Professional Development Funding)"]
     """
     matches = []
 
@@ -87,7 +98,7 @@ def generate_results(purposes: list) -> list:
 
 
 
-
+# All grants (keys), links to the application(values)
 grant_links = {"Barbara Lazarus Memorial Fund": "https://www.uni.illinois.edu/sites/default/files/2024-09/Barbara%20Lazarus%20Memorial%20Fund.pdf",
                 "Boren Scholarship": "https://www.uni.illinois.edu/sites/default/files/2022-11/Boren_Scholarship.docx",
                 "Eastern Illini Electric Cooperative": "https://eiec.org/youth-washington-program",
@@ -103,8 +114,7 @@ grant_links = {"Barbara Lazarus Memorial Fund": "https://www.uni.illinois.edu/si
                 "Teaching Excellence (Makino Awards)": "https://www.uni.illinois.edu/sites/default/files/2022-11/Makino_Award_Teaching_Excellence.doc"}
 
 
-
-# Run generate_results only if there are purposes selected
+# Run generate_results only when purpose(s) selected
 if purposes != []:
     st.write(f"Check out:")
     
