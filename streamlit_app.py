@@ -21,7 +21,7 @@ st.write("Displaying grant uses for:", association)
 
 
 # Empty to 1. be defined based on selected association's offered purposes and 2. make sure generate_results only runs when pill(s) selected
-purposes = []
+purposes = [grants.keys()]
 
 
 # Uses available for faculty (pill-buttons)
